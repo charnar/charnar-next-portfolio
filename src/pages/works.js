@@ -1,9 +1,7 @@
-import Head from "next/head";
-
-export default function Home() {
+export default function () {
   return (
     <div>
-      <h1>Home Page goes here</h1>
+      <h1>Works page goes here</h1>
       <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
