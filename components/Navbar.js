@@ -4,25 +4,31 @@ import Link from "next/link";
 const Navbar = ({ handleToggle }) => {
   return (
     <nav className="flex justify-center items-center fixed bg-pearl-white/50 top-0 left-0 py-4 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30 transition duration-300">
-      <div className="flex w-full max-w-7xl justify-between max-md:justify-end">
+      <div className="flex w-full max-w-7xl justify-end">
         <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium max-md:hidden">
           <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer font-semibold"
             href="/"
+            className="hover:text-orange-500 dark:text-pearl-white font-semibold cursor-pointer"
           >
             Charn A.
           </Link>
           <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
             href="/works"
+            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
           >
             Works
           </Link>
           <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
             href="/blog"
+            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
           >
             Blog
+          </Link>
+          <Link
+            href="/contact"
+            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
+          >
+            Contact
           </Link>
         </ul>
 
