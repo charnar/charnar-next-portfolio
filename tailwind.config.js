@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
   content: [
@@ -9,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        raleway: ["Raleway"],
-        merriweather: ["Merriweather", "serif"],
+        raleway: ["var(--font-raleway)"],
+        merriweather: ["var(--font-merriweather)"],
       },
 
       colors: {
