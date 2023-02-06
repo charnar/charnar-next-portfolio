@@ -44,10 +44,10 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-4 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30">
-      <div className="flex w-full max-w-4xl justify-end">
+      <div className="flex w-full max-w-4xl justify-between">
         <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium max-md:hidden">
           <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
+            className="hover:text-orange-500 font-semibold dark:text-pearl-white cursor-pointer"
             href="/"
           >
             Charn A.
