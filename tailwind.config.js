@@ -19,6 +19,7 @@ module.exports = {
         "pearl-white": "#FFFBF8",
         "cream-white": "#FDF1E7",
         "gold-yellow": "#DE9A58",
+        "underline-light-cream": "#ECC8A4",
       },
     },
   },

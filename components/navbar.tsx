@@ -5,6 +5,7 @@ import Link from "next/link";
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
 
 const Navbar = () => {
+  const navLinks = ["Works", "Blog"];
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -20,7 +21,7 @@ const Navbar = () => {
     if (currentTheme === "dark") {
       return (
         <button
-          className="bg-yellow-100 w-10 h-10 text-xl flex justify-center items-center ml-10 rounded"
+          className="bg-yellow-100 w-10 h-10 text-xl flex justify-center items-center ml-10 rounded-xl"
           onClick={() => setTheme("light")}
         >
           <span>
@@ -31,7 +32,7 @@ const Navbar = () => {
     } else {
       return (
         <button
-          className="bg-purple-600 w-10 h-10 text-xl flex justify-center items-center ml-10 rounded"
+          className="bg-purple-600 w-10 h-10 text-xl flex justify-center items-center ml-10 rounded-xl"
           onClick={() => setTheme("dark")}
         >
           <span>
@@ -43,27 +44,30 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-4 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30">
-      <div className="flex w-full max-w-4xl justify-between">
-        <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium max-md:hidden">
+    <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-3 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30">
+      <div className="flex w-full max-w-3xl justify-between">
+        <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium">
           <Link
-            className="hover:text-orange-500 font-semibold dark:text-pearl-white cursor-pointer"
+            className="hover:text-orange-500 font-bold dark:text-pearl-white cursor-pointer"
             href="/"
           >
             Charn A.
           </Link>
-          <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
-            href="/works"
-          >
-            Works
-          </Link>
-          <Link
-            className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
-            href="/blog"
-          >
-            Blog
-          </Link>
+
+          <div className="max-sm:hidden flex items-center gap-x-8">
+            <Link
+              className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
+              href="/works"
+            >
+              Works
+            </Link>
+            <Link
+              className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
+              href="/blog"
+            >
+              Blog
+            </Link>
+          </div>
         </ul>
 
         {renderThemeChanger()}

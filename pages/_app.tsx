@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <ThemeProvider enableSystem={true} attribute="class">
         <Layout></Layout>
-        <div className="py-10 px-8 max-w-4xl mx-auto">
+        <div className="py-10 px-8 max-w-3xl mx-auto">
           <Component {...pageProps} />
         </div>
       </ThemeProvider>
