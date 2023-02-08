@@ -31,13 +31,13 @@ export default function App({ Component, pageProps }: AppProps) {
         <Layout></Layout>
 
         <div className="py-10 px-8 max-w-3xl mx-auto">
-          <AnimatePresence exitBeforeEnter>
+          <AnimatePresence mode="wait">
             <motion.div
               key={router.route}
               initial="initialState"
               animate="animateState"
               exit="exitState"
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.25 }}
               variants={{
                 initialState: {
                   opacity: 0,
