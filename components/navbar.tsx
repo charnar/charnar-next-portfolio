@@ -68,18 +68,6 @@ const Navbar = () => {
 
             <div className="max-sm:hidden flex items-center gap-x-8">
               {navLinks.map((link: string) => renderNavLinks(link))}
-              {/* <Link
-                className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
-                href="/works"
-              >
-                Works
-              </Link>
-              <Link
-                className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
-                href="/blog"
-              >
-                Blog
-              </Link> */}
             </div>
           </ul>
 
