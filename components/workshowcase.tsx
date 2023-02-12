@@ -22,12 +22,12 @@ const WorkItem = (prop: WorkItemProp) => {
   return (
     <div className="text-center flex flex-col ">
       <div className="relative rounded-xl overflow-hidden aspect-video">
-        <Image
+        {/* <Image
           src={prop.imageLink}
           alt="Work Image"
           fill
           style={{ objectFit: "cover" }}
-        />
+        /> */}
       </div>
 
       <h1 className="font-semibold mt-1 text-lg">{prop.title}</h1>
