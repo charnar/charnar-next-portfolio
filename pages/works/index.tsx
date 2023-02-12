@@ -1,4 +1,4 @@
-import WorkItem from "@/components/workitem";
+import WorkShowcase from "@/components/workshowcase";
 
 const getServerSideProps = async () => {};
 
@@ -9,7 +9,7 @@ export default function Works() {
         Projects
       </h1>
 
-      <WorkItem title="Work goes here"></WorkItem>
+      <WorkShowcase></WorkShowcase>
     </section>
   );
 }

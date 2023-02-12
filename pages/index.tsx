@@ -48,7 +48,7 @@ export default function Home() {
           Timeline
         </h1>
 
-        <div className="pl-[3.2rem] -indent-[3.2em] mt-4">
+        <div className="pl-[3.2rem] -indent-[3.2em]">
           <span className="font-bold mr-4">Now</span>
           Studying for Bachelor's at SIIT, Thammasat University, interning as a
           Software Engineer at Agoda Services Co. Ltd.
