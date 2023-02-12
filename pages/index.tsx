@@ -1,3 +1,4 @@
+import profilePic from "../public/images/placeholder_me.jpg";
 import Image from "next/image";
 
 export default function Home() {
@@ -21,10 +22,7 @@ export default function Home() {
         </div>
         <div className="basis-1/2 md:basis-full max-sm:mt-10">
           <div className="max-sm:mx-auto my-auto w-56 h-56 rounded-full overflow-hidden border-light-brown border-4">
-            <img
-              className="object-cover w-full"
-              src="/images/placeholder_me.jpg"
-            ></img>
+            <Image src={profilePic} alt="Picture of me!" />
           </div>
         </div>
       </section>
