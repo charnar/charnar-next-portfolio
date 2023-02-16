@@ -1,7 +1,5 @@
 import WorkShowcase from "@/components/workshowcase";
 
-const getServerSideProps = async () => {};
-
 export default function Works() {
   return (
     <section>

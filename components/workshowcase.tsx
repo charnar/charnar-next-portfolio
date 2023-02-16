@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { works } from "data/works.json";
 
 interface WorkItemProp {
   title: string;
