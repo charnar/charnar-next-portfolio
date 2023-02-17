@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { works } from "data/works.json";
+import { works } from "@/data/works";
 
 interface WorkItemProp {
   title: string;
@@ -26,24 +26,11 @@ const WorkItem = (prop: WorkItemProp) => {
   );
 };
 
-const WorkShowcase = () => {
+export default function WorkShowcase(props: { works: WorkItemProp[] }) {
   {
-    const tempData = [
-      {
-        title: "CinnaTel",
-        imageLink: "/images/cinnatel.png",
-        description: "A Hotel DMBS",
-      },
-      {
-        title: "InfiniVac",
-        imageLink: "/images/infinivac.png",
-        description: "The only app you need to help get through the pandemic!",
-      },
-    ];
-
     return (
       <div className="grid grid-cols-2 gap-x-6 gap-y-10 mt-4 max-sm:grid-cols-1">
-        {tempData.map((item) => {
+        {props.works.map((item) => {
           return (
             <WorkItem
               title={item.title}
@@ -55,6 +42,4 @@ const WorkShowcase = () => {
       </div>
     );
   }
-};
-
-export default WorkShowcase;
+}
