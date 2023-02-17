@@ -17,6 +17,7 @@ const Navbar = () => {
   const renderNavLinks = (link: string) => {
     return (
       <Link
+        key={link}
         className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
         href={`/${link}`}
       >
