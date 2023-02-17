@@ -17,6 +17,7 @@ const Navbar = () => {
   const renderNavLinks = (link: string) => {
     return (
       <Link
+        key={link}
         className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
         href={`/${link}`}
       >
@@ -56,7 +57,7 @@ const Navbar = () => {
   const renderNavbar = () => {
     if (!mounted) return null;
     return (
-      <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-3 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30">
+      <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-3 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30 z-10">
         <div className="flex w-full max-w-3xl justify-between">
           <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium">
             <Link

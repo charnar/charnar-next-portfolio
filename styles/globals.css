@@ -14,11 +14,13 @@ body {
   overflow-x: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   .light {
     background: #fdf1e7;
   }
+}
 
+@media (prefers-color-scheme: dark) {
   .dark {
     background: #21201f;
   }
