@@ -28,7 +28,7 @@ export default function Home() {
       </section>
 
       <section id="section-about" className="mb-10">
-        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-bold underline underline-offset-8 decoration-2 mb-2">
+        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-2">
           About
         </h1>
 
@@ -44,7 +44,7 @@ export default function Home() {
       </section>
 
       <section id="section-timeline">
-        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-bold underline underline-offset-8 decoration-2 mb-2">
+        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-2">
           Timeline
         </h1>
 

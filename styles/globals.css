@@ -18,9 +18,15 @@ body {
   .light {
     background: #fdf1e7;
   }
+  .dark {
+    background: #21201f;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
+  .light {
+    background: #fdf1e7;
+  }
   .dark {
     background: #21201f;
   }
