@@ -28,4 +28,11 @@ export const works = [
     imageLink: "/images/infinivac.png",
     description: "The only app you need to help get through the pandemic!",
   },
+
+  {
+    title: "Druid",
+    link: "druid",
+    imageLink: "",
+    description: "A plant based monitoring system",
+  },
 ];

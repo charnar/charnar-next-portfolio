@@ -1,1 +1,4 @@
-export const placeholder = "hi";
+export interface linksProp {
+  href: string;
+  label: string;
+}

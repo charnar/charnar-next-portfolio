@@ -1,13 +1,14 @@
 import "@/styles/globals.css";
-import { ThemeProvider } from "next-themes";
-import type { AppProps } from "next/app";
-import { motion, AnimatePresence } from "framer-motion";
-
 import { Merriweather } from "@next/font/google";
 import { Raleway } from "@next/font/google";
 
-import Layout from "./layout";
+import { ThemeProvider } from "next-themes";
+import { AppProps } from "next/app";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import Head from "next/head";
+
+import Layout from "./layout";
 
 const merriweather = Merriweather({
   weight: ["300", "400", "700", "900"],
@@ -27,9 +28,11 @@ export default function App({ Component, pageProps }: AppProps) {
     <main
       className={`${merriweather.variable} ${raleway.variable} font-raleway`}
     >
+      <Head>
+        <title>{router.route}</title>
+      </Head>
       <ThemeProvider enableSystem={true} attribute="class">
         <Layout></Layout>
-
         <div className="py-10 px-8 max-w-3xl mx-auto">
           <AnimatePresence mode="wait">
             <motion.div

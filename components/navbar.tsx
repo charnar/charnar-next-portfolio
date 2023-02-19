@@ -1,28 +1,43 @@
+"use client";
 import { useTheme } from "next-themes";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { linksProp } from "@/interfaces/homepageprops";
+
+import { motion } from "framer-motion";
 
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
 import MenuItems from "./menuitems";
 
 const Navbar = () => {
-  const navLinks = ["works", "blog"];
+  const links = [
+    { href: "/works", label: "Works" },
+    { href: "/blog", label: "Blog" },
+  ];
+
   const { systemTheme, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const path = usePathname();
 
-  useEffect(() => {
-    setMounted(true);
-  });
-
-  const renderNavLinks = (link: string) => {
+  const renderNavLinks = (link: linksProp) => {
     return (
-      <Link
-        key={link}
-        className="hover:text-orange-500 dark:text-pearl-white cursor-pointer"
-        href={`/${link}`}
-      >
-        {link[0].toUpperCase() + link.slice(1)}
-      </Link>
+      <li className="max-sm:hidden relative">
+        <Link
+          key={link.href}
+          className={
+            link.href === path ? "text-gold-yellow" : "dark:text-pearl-white"
+          }
+          href={link.href}
+        >
+          {link.href === path && (
+            <motion.span
+              layoutId="underline"
+              className="absolute left-0 top-full block h-[2px] bg-gold-yellow w-full"
+            />
+          )}
+          {link.label}
+        </Link>
+      </li>
     );
   };
 
@@ -55,21 +70,16 @@ const Navbar = () => {
   };
 
   const renderNavbar = () => {
-    if (!mounted) return null;
     return (
       <nav className="flex justify-center items-center fixed bg-pearl-white/30 top-0 left-0 py-3 px-6 w-full backdrop-blur-xl dark:bg-dark-brown/30 z-10">
         <div className="flex w-full max-w-3xl justify-between">
           <ul className="flex items-center text-dark-brown text-lg gap-x-8 font-medium">
-            <Link
-              className="hover:text-orange-500 font-bold dark:text-pearl-white cursor-pointer"
-              href="/"
-            >
-              Charn A.
-            </Link>
-
-            <div className="max-sm:hidden flex items-center gap-x-8">
-              {navLinks.map((link: string) => renderNavLinks(link))}
-            </div>
+            <li>
+              <Link className="font-bold dark:text-pearl-white" href="/">
+                Charn A.
+              </Link>
+            </li>
+            {links.map((link: linksProp) => renderNavLinks(link))}
           </ul>
 
           <div className="flex">
