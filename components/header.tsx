@@ -1,6 +1,5 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { linksProp } from "@/interfaces/homepageprops";
@@ -9,15 +8,21 @@ import { motion } from "framer-motion";
 
 import { BsFillMoonStarsFill, BsSun } from "react-icons/bs";
 import MenuItems from "./menuitems";
+import { useEffect, useState } from "react";
 
-const Navbar = () => {
-  const links = [
-    { href: "/works", label: "Works" },
-    { href: "/blog", label: "Blog" },
-  ];
+const links = [
+  { href: "/works", label: "Works" },
+  { href: "/blog", label: "Blog" },
+];
 
-  const { systemTheme, theme, setTheme } = useTheme();
+export default function Header(): any {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const path = usePathname();
+
+  useEffect(() => {
+    setMounted(true);
+  });
 
   const renderNavLinks = (link: linksProp) => {
     return (
@@ -42,7 +47,7 @@ const Navbar = () => {
   };
 
   const renderThemeChanger = () => {
-    const currentTheme = theme === "system" ? systemTheme : theme;
+    const currentTheme = theme;
 
     if (currentTheme === "dark") {
       return (
@@ -91,7 +96,6 @@ const Navbar = () => {
     );
   };
 
-  return renderNavbar();
-};
-
-export default Navbar;
+  if (!mounted) return;
+  return <header className="mb-16">{renderNavbar()}</header>;
+}

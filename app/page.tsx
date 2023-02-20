@@ -1,9 +1,10 @@
 import profilePic from "../public/images/placeholder_me.jpg";
 import Image from "next/image";
+import PageWrapper from "@/components/page-wrapper";
 
 export default function Home() {
   return (
-    <>
+    <PageWrapper>
       <section
         id="section-head"
         className="flex flex-col sm:flex-row-reverse mb-16"
@@ -69,6 +70,6 @@ export default function Home() {
           Born in Bangkok Thailand
         </div>
       </section>
-    </>
+    </PageWrapper>
   );
 }
