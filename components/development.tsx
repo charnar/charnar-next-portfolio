@@ -7,7 +7,7 @@ const Development = () => {
       <div className="w-56 h-56 mx-auto">
         <Image src={hourGlass} alt="sandwatch" />
       </div>
-      <h1 className="font-semibold text-xl">
+      <h1 className="font-semibold text-lg">
         I am still working on it, coming soon!
       </h1>
     </div>
