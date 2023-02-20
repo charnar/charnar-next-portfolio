@@ -16,7 +16,7 @@ const links = [
 ];
 
 export default function Header(): any {
-  const { theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const path = usePathname();
 
@@ -47,7 +47,7 @@ export default function Header(): any {
   };
 
   const renderThemeChanger = () => {
-    const currentTheme = theme;
+    const currentTheme = theme === "system" ? systemTheme : theme;
 
     if (currentTheme === "dark") {
       return (
