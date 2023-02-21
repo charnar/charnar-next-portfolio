@@ -1,4 +1,4 @@
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/pagewrapper";
 import WorkHeading from "@/components/workheading";
 import WorkTag from "@/components/worktag";
 

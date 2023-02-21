@@ -1,6 +1,8 @@
 import profilePic from "../public/images/placeholder_me.jpg";
 import Image from "next/image";
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/pagewrapper";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { GrMail } from "react-icons/gr";
 
 export default function Home() {
   return (
@@ -29,7 +31,7 @@ export default function Home() {
       </section>
 
       <section id="section-about" className="mb-10">
-        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-2">
+        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-4">
           About
         </h1>
 
@@ -44,8 +46,8 @@ export default function Home() {
         </p>
       </section>
 
-      <section id="section-timeline">
-        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-2">
+      <section id="section-timeline" className="mb-10">
+        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-4">
           Timeline
         </h1>
 
@@ -68,6 +70,46 @@ export default function Home() {
         <div className="pl-[3.2rem] -indent-[3.2rem] mt-1">
           <span className="font-bold mr-4">2000</span>
           Born in Bangkok Thailand
+        </div>
+      </section>
+
+      <section id="section-socials">
+        <h1 className="text-gold-yellow decoration-underline-light-cream text-xl font-semibold underline underline-offset-8 decoration-2 mb-4">
+          Me
+        </h1>
+
+        <div className="px-4">
+          <ul>
+            <li className="mb-1">
+              <a
+                href="https://github.com/charnar"
+                target="_blank"
+                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+              >
+                <BsGithub className="mr-2" />
+                charnar
+              </a>
+            </li>
+            <li className="mb-1">
+              <a
+                href="https://www.linkedin.com/in/charnar"
+                target="_blank"
+                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+              >
+                <BsLinkedin className="mr-2" />
+                Charn Arunkit
+              </a>
+            </li>
+            <li className="mb-1">
+              <a
+                href="mailto: charn.arunkit@yahoo.com"
+                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+              >
+                <GrMail className="mr-2" />
+                charn.arunkit@yahoo.com
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
     </PageWrapper>

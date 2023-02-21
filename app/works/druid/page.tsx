@@ -1,6 +1,6 @@
 import WorkTag from "@/components/worktag";
 import WorkHeading from "@/components/workheading";
-import PageWrapper from "@/components/page-wrapper";
+import PageWrapper from "@/components/pagewrapper";
 
 export default function Druid() {
   return (

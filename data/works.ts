@@ -4,17 +4,6 @@ export const works = [
     link: "cinnatel",
     imageLink: "/images/cinnatel.png",
     description: "A Hotel Database Management System",
-    tags: [
-      {
-        tagName: "Stack",
-        tagContent: "HTML CSS JavaScript, PHP, MySQL",
-      },
-      {
-        tagName: "GitHub",
-        tagContent: "https://github.com/charnar/CinnaTel",
-        tagLinkFlag: true,
-      },
-    ],
   },
   {
     title: "GL Project",
@@ -32,7 +21,17 @@ export const works = [
   {
     title: "Druid",
     link: "druid",
-    imageLink: "",
+    imageLink: "/images/druid.png",
     description: "A plant based monitoring system",
+  },
+];
+
+export const oldWorks = [
+  {
+    title: "My First Portfolio Site",
+    link: "https://charnar-portfolio.netlify.app",
+    imageLink: "/images/old_portfolio.png",
+    description: "It's still here!",
+    externalFlag: true,
   },
 ];

@@ -4,12 +4,7 @@ import hourGlass from "public/images/sand-watch.png";
 const Development = () => {
   return (
     <div className="flex flex-col text-center">
-      <div className="w-56 h-56 mx-auto">
-        <Image src={hourGlass} alt="sandwatch" />
-      </div>
-      <h1 className="font-semibold text-lg">
-        I am still working on it, coming soon!
-      </h1>
+      <h1 className="font-medium text-lg">Nothing to see here yet!</h1>
     </div>
   );
 };

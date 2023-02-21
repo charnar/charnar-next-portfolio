@@ -2,7 +2,7 @@
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { linksProp } from "@/interfaces/homepageprops";
+import { LinksProp } from "@/interfaces/homepageprops";
 
 import { motion } from "framer-motion";
 
@@ -24,22 +24,18 @@ export default function Header(): any {
     setMounted(true);
   });
 
-  const renderNavLinks = (link: linksProp) => {
+  const renderNavLinks = (link: LinksProp) => {
     return (
-      <li className="max-sm:hidden relative">
+      <li className="max-sm:hidden">
         <Link
           key={link.href}
           className={
-            link.href === path ? "text-gold-yellow" : "dark:text-pearl-white"
+            link.href === path
+              ? "text-gold-yellow underline underline-offset-4"
+              : "dark:text-pearl-white"
           }
           href={link.href}
         >
-          {link.href === path && (
-            <motion.span
-              layoutId="underline"
-              className="absolute left-0 top-full block h-[2px] bg-gold-yellow w-full"
-            />
-          )}
           {link.label}
         </Link>
       </li>
@@ -84,12 +80,12 @@ export default function Header(): any {
                 Charn A.
               </Link>
             </li>
-            {links.map((link: linksProp) => renderNavLinks(link))}
+            {links.map((link: LinksProp) => renderNavLinks(link))}
           </ul>
 
           <div className="flex">
             {renderThemeChanger()}
-            <MenuItems></MenuItems>
+            <MenuItems links={links}></MenuItems>
           </div>
         </div>
       </nav>
@@ -97,5 +93,13 @@ export default function Header(): any {
   };
 
   if (!mounted) return;
-  return <header className="mb-16">{renderNavbar()}</header>;
+  return (
+    <motion.header
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="mb-16"
+    >
+      {renderNavbar()}
+    </motion.header>
+  );
 }

@@ -2,24 +2,35 @@ import Image from "next/image";
 import Link from "next/link";
 import { WorkItemProp } from "@/interfaces/workpageprops";
 
+const renderImageCover = (imageLink: string) => {
+  return (
+    <div className="relative rounded-xl overflow-hidden aspect-video">
+      <Image
+        src={imageLink}
+        alt="Work Image"
+        fill
+        style={{ objectFit: "cover" }}
+      />
+    </div>
+  );
+};
+
 const WorkItem: React.FC<WorkItemProp> = ({
   title,
   imageLink,
   link,
   description,
+  externalFlag,
 }: WorkItemProp) => {
   return (
     <div className="text-center flex flex-col ">
-      <Link href={`/works/${link}`}>
-        <div className="relative rounded-xl overflow-hidden aspect-video">
-          <Image
-            src={imageLink}
-            alt="Work Image"
-            fill
-            style={{ objectFit: "cover" }}
-          />
-        </div>
-      </Link>
+      {externalFlag ? (
+        <a href={link} target="_blank">
+          {renderImageCover(imageLink)}
+        </a>
+      ) : (
+        <Link href={`/works/${link}`}>{renderImageCover(imageLink)}</Link>
+      )}
 
       <h1 className="font-semibold mt-1 text-lg">{title}</h1>
       <h2 className="text-md">{description}</h2>
@@ -39,6 +50,7 @@ export default function WorkShowcase(props: { works: WorkItemProp[] }) {
               imageLink={item.imageLink}
               description={item.description}
               link={item.link}
+              externalFlag={item.externalFlag}
             ></WorkItem>
           );
         })}

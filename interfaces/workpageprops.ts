@@ -17,4 +17,5 @@ export interface WorkItemProp extends WorkHeadingProp {
   imageLink: string;
   link: string;
   tags?: WorkTagProp[];
+  externalFlag?: boolean;
 }
