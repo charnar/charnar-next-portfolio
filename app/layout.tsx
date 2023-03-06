@@ -1,7 +1,7 @@
 "use client";
 import "../styles/globals.css";
-import { Merriweather } from "@next/font/google";
-import { Raleway } from "@next/font/google";
+import { Merriweather } from "next/font/google";
+import { Raleway } from "next/font/google";
 
 import { ThemeProvider } from "next-themes";
 import Header from "@/components/header";

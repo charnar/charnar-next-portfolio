@@ -3,6 +3,10 @@ import { works as worksList, oldWorks as oldWorksList } from "@/data/works";
 
 import PageWrapper from "@/components/pagewrapper";
 
+export const metadata = {
+  title: 'charnar | Works',
+};
+
 export default function Works() {
   return (
     <PageWrapper>

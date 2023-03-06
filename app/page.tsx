@@ -4,6 +4,10 @@ import PageWrapper from "@/components/pagewrapper";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 
+export const metadata = {
+  title: 'charnar | Home',
+};
+
 export default function Home() {
   return (
     <PageWrapper>
