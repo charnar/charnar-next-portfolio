@@ -11,16 +11,21 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 @media (prefers-color-scheme: light) {
   .light {
     background: #fdf1e7;
   }
+  .dark {
+    background: #21201f;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
+  .light {
+    background: #fdf1e7;
+  }
   .dark {
     background: #21201f;
   }

@@ -1,27 +1,39 @@
 import Image from "next/image";
-import { works } from "@/data/works";
+import Link from "next/link";
+import { WorkItemProp } from "@/interfaces/workpageprops";
 
-interface WorkItemProp {
-  title: string;
-  imageLink: string;
-  link?: string;
-  description?: string;
-}
+const renderImageCover = (imageLink: string) => {
+  return (
+    <div className="relative rounded-xl overflow-hidden aspect-video">
+      <Image
+        src={imageLink}
+        alt="Work Image"
+        fill
+        style={{ objectFit: "cover" }}
+      />
+    </div>
+  );
+};
 
-const WorkItem = (prop: WorkItemProp) => {
+const WorkItem: React.FC<WorkItemProp> = ({
+  title,
+  imageLink,
+  link,
+  description,
+  externalFlag,
+}: WorkItemProp) => {
   return (
     <div className="text-center flex flex-col ">
-      <div className="relative rounded-xl overflow-hidden aspect-video">
-        <Image
-          src={prop.imageLink}
-          alt="Work Image"
-          fill
-          style={{ objectFit: "cover" }}
-        />
-      </div>
+      {externalFlag ? (
+        <a href={link} target="_blank">
+          {renderImageCover(imageLink)}
+        </a>
+      ) : (
+        <Link href={`/works/${link}`}>{renderImageCover(imageLink)}</Link>
+      )}
 
-      <h1 className="font-semibold mt-1 text-lg">{prop.title}</h1>
-      <h2 className="text-md">{prop.description}</h2>
+      <h1 className="font-semibold mt-1 text-lg">{title}</h1>
+      <h2 className="text-md">{description}</h2>
     </div>
   );
 };
@@ -33,9 +45,12 @@ export default function WorkShowcase(props: { works: WorkItemProp[] }) {
         {props.works.map((item) => {
           return (
             <WorkItem
+              key={item.title}
               title={item.title}
               imageLink={item.imageLink}
               description={item.description}
+              link={item.link}
+              externalFlag={item.externalFlag}
             ></WorkItem>
           );
         })}
