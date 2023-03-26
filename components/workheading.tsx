@@ -6,7 +6,7 @@ const WorkHeading: React.FC<WorkHeadingProp> = ({ title, description }) => {
     <div>
       <h1 className="text-lg font-medium">
         <Link
-          className="hover:underline underline-offset-4 text-blue-500 dark:text-pink-500"
+          className="hover:underline underline-offset-4 text-teal-600 dark:text-pink-500"
           href="/works"
         >
           Works
