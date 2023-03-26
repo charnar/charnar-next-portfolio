@@ -32,7 +32,7 @@ export default function Header(): any {
           className={
             link.href === path
               ? "text-gold-yellow underline underline-offset-4"
-              : "dark:text-pearl-white"
+              : "dark:text-pearl-white hover:underline underline-offset-4"
           }
           href={link.href}
         >

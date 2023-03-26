@@ -5,7 +5,7 @@ import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
 
 export const metadata = {
-  title: 'charnar | Home',
+  title: "charnar | Home",
 };
 
 export default function Home() {
@@ -40,14 +40,31 @@ export default function Home() {
         </h1>
 
         <p className="text-md">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Hello, I am an undergraduate student in the field of Computer
+          Engineering. I'm fairly new to Software Engineering and I find it very
+          enjoyable! It feels really good to see how your work can positively
+          affect other people. I usually prefer mini design work and front-end
+          development but I'm starting to like back-end development as well. I
+          have a solid foundation in programming and experience with popular
+          frameworks like Vue and React. I've recently been working with
+          full-stack frameworks like Next.js and ASP.NET Core.
         </p>
+
+        <p className="text-md my-4">
+          I love a good cup of coffee and music is life. I would love to travel
+          more in the future and start a mini blog to post random things for
+          fun.
+        </p>
+
+        <h3 className="font-semibold">
+          <span className="dark:text-pink-500 text-teal-600 mr-1">
+            &hearts;&hearts;
+          </span>
+          Thanks for stopping by!
+          <span className="dark:text-pink-500 text-teal-600 ml-1">
+            &hearts;&hearts;
+          </span>
+        </h3>
       </section>
 
       <section id="section-timeline" className="mb-10">
@@ -59,11 +76,6 @@ export default function Home() {
           <span className="font-bold mr-4">Now</span>
           Studying for Bachelor's at SIIT, Thammasat University, interning as a
           Software Engineer at Agoda Services Co. Ltd.
-        </div>
-
-        <div className="pl-[3.2rem] -indent-[3.2rem] mt-1">
-          <span className="font-bold mr-4">2022 - 2023</span>
-          Research Assistant for the Thammasat AI-Ready City foundation
         </div>
 
         <div className="pl-[3.2rem] -indent-[3.2rem] mt-1">
@@ -88,7 +100,7 @@ export default function Home() {
               <a
                 href="https://github.com/charnar"
                 target="_blank"
-                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+                className="flex align-middle font-semibold items-center text-teal-600 dark:text-pink-500 hover:underline underline-offset-4"
               >
                 <BsGithub className="mr-2" />
                 charnar
@@ -98,7 +110,8 @@ export default function Home() {
               <a
                 href="https://www.linkedin.com/in/charnar"
                 target="_blank"
-                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+                className="flex align-middle font-semibold items-center text-teal-600 dark:text-pink-500
+                hover:underline underline-offset-4"
               >
                 <BsLinkedin className="mr-2" />
                 Charn Arunkit
@@ -107,7 +120,8 @@ export default function Home() {
             <li className="mb-1">
               <a
                 href="mailto: charn.arunkit@yahoo.com"
-                className="flex align-middle font-semibold items-center text-blue-500 dark:text-pink-500"
+                className="flex align-middle font-semibold items-center text-teal-600 dark:text-pink-500
+                hover:underline underline-offset-4"
               >
                 <GrMail className="mr-2" />
                 charn.arunkit@yahoo.com
