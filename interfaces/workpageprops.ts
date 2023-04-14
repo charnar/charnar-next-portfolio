@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export interface WorkHeadingProp {
   title: string;
   description: string;
@@ -14,7 +16,7 @@ export interface WorkDetailsProp {
 }
 
 export interface WorkItemProp extends WorkHeadingProp {
-  imageLink: string;
+  image: StaticImageData;
   link: string;
   tags?: WorkTagProp[];
   externalFlag?: boolean;

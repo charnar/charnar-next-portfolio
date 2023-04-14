@@ -1,10 +1,15 @@
-import WorkShowcase from "@/components/workshowcase";
-import { works as worksList, oldWorks as oldWorksList } from "@/data/works";
+import WorkShowcase from "@/components/workitem";
+import cinnatelImg from "public/images/cinnatel.png";
+import oldPortfolioImg from "public/images/old_portfolio.png";
+import glProjectImg from "public/images/glproject.png";
+import infinivacImg from "public/images/infinivac.png";
+import druidImg from "public/images/druid.png";
 
 import PageWrapper from "@/components/pagewrapper";
+import WorkItem from "@/components/workitem";
 
 export const metadata = {
-  title: 'charnar | Works',
+  title: "charnar | Works",
 };
 
 export default function Works() {
@@ -15,7 +20,37 @@ export default function Works() {
           Projects
         </h1>
 
-        <WorkShowcase works={worksList}></WorkShowcase>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 mt-4 max-sm:grid-cols-1">
+          <WorkItem
+            key="cinnatel"
+            title="Cinnatel"
+            link="cinnatel"
+            description="A Hotel Database Management system"
+            image={cinnatelImg}
+          ></WorkItem>
+          <WorkItem
+            key="infinivac"
+            title="InfiniVac"
+            link="infinivac"
+            description="The only app you need to help get through the pandemic!"
+            image={infinivacImg}
+          ></WorkItem>
+          <WorkItem
+            key="glproject"
+            title="GL Project"
+            link="glproject"
+            description="A library full of your games!"
+            image={glProjectImg}
+          ></WorkItem>
+
+          <WorkItem
+            key="druid"
+            title="Druid"
+            link="druid"
+            description="A plant based monitoring system"
+            image={druidImg}
+          ></WorkItem>
+        </div>
       </section>
 
       <section>
@@ -23,7 +58,16 @@ export default function Works() {
           Old Works
         </h1>
 
-        <WorkShowcase works={oldWorksList}></WorkShowcase>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 mt-4 max-sm:grid-cols-1">
+          <WorkItem
+            key="old-portfolio"
+            title="My First Portfolio Site"
+            link="https://charnar-portfolio.netlify.app"
+            description="It's still here!"
+            image={oldPortfolioImg}
+            externalFlag={true}
+          ></WorkItem>
+        </div>
       </section>
     </PageWrapper>
   );
