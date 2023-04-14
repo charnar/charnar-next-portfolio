@@ -4,8 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 
 const MenuItems: React.FC<MenuItemsProp> = ({ links }) => {
-  const genericHamburgerLine = `bg-gray-500 dark:bg-gray-300 h-0.5 w-5 my-0.5 rounded-full bg-black transition ease transform duration-300`;
-  const menuDropdown = `sm:hidden fixed py-3 top-16 right-6 bg-white dark:bg-dark-alt w-44 rounded-xl dark:border-zinc-700 drop-shadow-sm`;
+  const genericHamburgerLine = `bg-gray-500 dark:bg-gray-300 h-0.5 w-5 my-0.5 rounded-full transition-transform ease transform duration-300`;
+  const menuDropdown = `sm:invisible fixed py-3 top-16 right-6 bg-white dark:bg-dark-alt w-44 rounded-xl dark:border-zinc-700 drop-shadow-sm transition-transform duration-300 transform origin-top-right`;
   const [isOpen, setIsOpen] = useState(false);
 
   const renderItems = (link: LinksProp) => {
@@ -15,9 +15,7 @@ const MenuItems: React.FC<MenuItemsProp> = ({ links }) => {
           className="px-4 py-2 group hover:bg-orange-300"
           onClick={() => setIsOpen(false)}
         >
-          <span className="group-hover:underline underline-offset-4">
-            {link.label}
-          </span>
+          <span className="">{link.label}</span>
         </li>
       </Link>
     );
@@ -49,7 +47,7 @@ const MenuItems: React.FC<MenuItemsProp> = ({ links }) => {
         />
       </button>
 
-      <div className={`${menuDropdown} ${isOpen ? "" : "hidden"}`}>
+      <div className={`${menuDropdown} ${isOpen ? "" : "scale-0"}`}>
         <ul>{links.map((link: LinksProp) => renderItems(link))}</ul>
       </div>
     </div>
