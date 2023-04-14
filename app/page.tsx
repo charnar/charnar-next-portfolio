@@ -29,7 +29,12 @@ export default function Home() {
         </div>
         <div className="basis-1/2 md:basis-full max-sm:mt-10">
           <div className="max-sm:mx-auto my-auto w-56 h-56 rounded-full overflow-hidden border-light-brown border-4">
-            <Image src={profilePic} alt="Picture of me!" />
+            <Image
+              src={profilePic}
+              alt="Picture of me!"
+              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAACXBIWXMAAAGJAAABiQGeLhE1AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAACqADAAQAAAABAAAACgAAAAA7eLj1AAABN0lEQVQYGV3PS0sCcRTG4V95LdukqItuVJtIiOwCQZi7FhV9gZZtxG/Th2gRLdoF1TIqKMEwJbxVksR0maa/6TTj4Ew1m7HexTmL8/LAwfqXbObcqt0VLaHI9qUhPuztpiuG0aacPeLy4hSvx8Py6haRUJCF5Dp/irl8nqXkJqp4ZTxsMTo6QOPz06Z6u0BcvW4epRaqf4jak8J94RjTatkVW9R1nVqlhFQtM5dIEJ+dpnJ9gqE1GBxZdERJksDQCfT7qBdv8fgDjMWSuINTDE/EHPHtRzsrFEmnU7zLMtXMAaWbK0RLZ2Z+xSn6Xp7Z2FhD0zQi0SheM47efEYWhl36HfYzhtrka3+Xej6HEIKW1kHr9CF0L6ZpOmJ8O0WlkGdkchL1/YHDvR1cPRZNtY2iyIRCYb4BLX2gRREVTaAAAAAASUVORK5CYII="
+              placeholder="blur"
+            />
           </div>
         </div>
       </section>

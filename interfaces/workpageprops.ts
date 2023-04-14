@@ -15,6 +15,7 @@ export interface WorkDetailsProp {
 
 export interface WorkItemProp extends WorkHeadingProp {
   imageLink: string;
+  blurImageLink: string;
   link: string;
   tags?: WorkTagProp[];
   externalFlag?: boolean;

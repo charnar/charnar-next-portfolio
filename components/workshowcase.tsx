@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { WorkItemProp } from "@/interfaces/workpageprops";
 
-const renderImageCover = (imageLink: string) => {
+const renderImageCover = (imageLink: string, blurImageLink: string) => {
   return (
     <div className="relative rounded-xl overflow-hidden aspect-video">
       <Image
@@ -10,6 +10,8 @@ const renderImageCover = (imageLink: string) => {
         alt="Work Image"
         fill
         style={{ objectFit: "cover" }}
+        blurDataURL={blurImageLink}
+        placeholder="blur"
       />
     </div>
   );
@@ -18,6 +20,7 @@ const renderImageCover = (imageLink: string) => {
 const WorkItem: React.FC<WorkItemProp> = ({
   title,
   imageLink,
+  blurImageLink,
   link,
   description,
   externalFlag,
@@ -26,10 +29,12 @@ const WorkItem: React.FC<WorkItemProp> = ({
     <div className="text-center flex flex-col ">
       {externalFlag ? (
         <a href={link} target="_blank">
-          {renderImageCover(imageLink)}
+          {renderImageCover(imageLink, blurImageLink)}
         </a>
       ) : (
-        <Link href={`/works/${link}`}>{renderImageCover(imageLink)}</Link>
+        <Link href={`/works/${link}`}>
+          {renderImageCover(imageLink, blurImageLink)}
+        </Link>
       )}
 
       <h1 className="font-semibold mt-1 text-lg">{title}</h1>
@@ -48,6 +53,7 @@ export default function WorkShowcase(props: { works: WorkItemProp[] }) {
               key={item.title}
               title={item.title}
               imageLink={item.imageLink}
+              blurImageLink={item.blurImageLink}
               description={item.description}
               link={item.link}
               externalFlag={item.externalFlag}
