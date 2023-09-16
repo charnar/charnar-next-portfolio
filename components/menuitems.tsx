@@ -12,10 +12,10 @@ const MenuItems: React.FC<MenuItemsProp> = ({ links }) => {
     return (
       <Link href={link.href}>
         <li
-          className="px-4 py-2 group hover:bg-orange-300"
+          className="px-4 py-2 group hover:bg-orange-100 hover:font-medium hover:dark:bg-gold-yellow"
           onClick={() => setIsOpen(false)}
         >
-          <span className="">{link.label}</span>
+          <span>{link.label}</span>
         </li>
       </Link>
     );
