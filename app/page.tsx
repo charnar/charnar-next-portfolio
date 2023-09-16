@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageWrapper from "@/components/pagewrapper";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { GrMail } from "react-icons/gr";
+import { FaHeart } from "react-icons/fa6";
 
 export const metadata = {
   title: "charnar | Home",
@@ -24,7 +25,7 @@ export default function Home() {
             </span>
           </h1>
           <h2 className="text-2xl font-raleway dark:text-pearl-white">
-            A Computer Engineering Student
+            A Software Engineer
           </h2>
         </div>
         <div className="basis-1/2 md:basis-full max-sm:mt-10">
@@ -40,14 +41,10 @@ export default function Home() {
         </h1>
 
         <p className="text-md">
-          Hello, I am an undergraduate student in the field of Computer
-          Engineering. I'm fairly new to Software Engineering and I find it very
-          enjoyable! It feels really good to see how your work can positively
-          affect other people. I usually prefer mini design work and front-end
-          development but I'm starting to like back-end development as well. I
-          have a solid foundation in programming and experience with popular
-          frameworks like Vue and React. I've recently been working with
-          full-stack frameworks like Next.js and ASP.NET Core.
+          Hello, welcome to my portfolio! I am currently working as a Full Stack
+          Developer. I find it very enjoyable, it feels really good to see how
+          your work can positively affect other people. I also like to do some
+          mini UX/UI design during my freetime
         </p>
 
         <p className="text-md my-4">
@@ -56,13 +53,16 @@ export default function Home() {
           fun.
         </p>
 
-        <h3 className="font-semibold">
-          <span className="dark:text-pink-500 text-teal-600 mr-1">
-            &hearts;&hearts;
+        <h3 className="font-semibold inline-flex items-center">
+          <span className="dark:text-pink-500 text-teal-600 mr-1 inline-flex space-x-0.5">
+            <FaHeart />
+            <FaHeart />
           </span>
           Thanks for stopping by!
-          <span className="dark:text-pink-500 text-teal-600 ml-1">
-            &hearts;&hearts;
+          <span className="dark:text-pink-500 text-teal-600 ml-1 inline-flex space-x-0.5">
+            <FaHeart />
+
+            <FaHeart />
           </span>
         </h3>
       </section>
@@ -74,8 +74,13 @@ export default function Home() {
 
         <div className="pl-[3.2rem] -indent-[3.2em]">
           <span className="font-bold mr-4">Now</span>
-          Studying for Bachelor's at SIIT, Thammasat University, interning as a
-          Software Engineer at Agoda Services Co. Ltd.
+          Working as a Software Engineer at Agoda Services Co. Ltd.
+        </div>
+
+        <div className="pl-[3.2rem] -indent-[3.2em]">
+          <span className="font-bold mr-4">2023</span>
+          Completed a Bachelor's in Engineering from SIIT, Thammasat University
+          and graduated with first honors
         </div>
 
         <div className="pl-[3.2rem] -indent-[3.2rem] mt-1">
